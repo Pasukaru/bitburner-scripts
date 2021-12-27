@@ -10,7 +10,7 @@ export async function main(ns) {
     for (const i in hosts) {
       const host = hosts[i];
 
-      setStep(ns, 'checking if host is owned', { i, host });
+      await setStep(ns, 'checking if host is owned', { i, host });
       if (await ns.fileExists(BN_FLAG_FILE, host)) {
         // This host has already been owned.
         continue;
