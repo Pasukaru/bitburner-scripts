@@ -27,7 +27,7 @@ const SCRIPTS = [
 const joinPath = (...parts) => parts.join('/');
 
 export async function main(ns) {
-  const scriptServer = ns.args[0] || 'http://localhost:8080';
+  const scriptServer = ns.args[0] || 'https://raw.githubusercontent.com/Pasukaru/bitburner/master/src';
   const scriptRoot = 'scripts';
 
   for (const script of SCRIPTS) {
