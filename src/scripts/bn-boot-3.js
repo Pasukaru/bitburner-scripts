@@ -23,7 +23,7 @@ export async function main(ns) {
 
       await setStep(ns, 'checking if we have root access on host', { i, host });
 
-      while (await ns.hasRootAccess(thisHost)) {
+      if (await ns.hasRootAccess(thisHost)) {
         // We already have root access on this host.
         await log(ns, `We already have root access on host: ${host}`);
         continue;
